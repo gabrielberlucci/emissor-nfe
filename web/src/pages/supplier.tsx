@@ -6,9 +6,11 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
+import { Button } from '@/components/ui/button';
 import { SidebarProvider } from '@/components/ui/sidebar';
+import { Title, TitleDescription, TitleRoot } from '@/components/ui/title';
 import { SidebarLayout } from '@/layout/sidebarlayout';
-import { Bell } from 'lucide-react';
+import { Bell, Plus } from 'lucide-react';
 
 const Supplier = () => {
   return (
@@ -38,6 +40,20 @@ const Supplier = () => {
               <AvatarImage src="https://i.pinimg.com/736x/42/fc/a3/42fca3c24df31ddf6b1dec5ce7675227.jpg" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
+          </div>
+        </div>
+        <div className="p-8 flex items-center justify-between">
+          <TitleRoot>
+            <Title>Gerenciar Fornecedores</Title>
+            <TitleDescription>
+              Visualize, filtre e gerencie seus parceiros comerciais cadastrados
+            </TitleDescription>
+          </TitleRoot>
+
+          <div>
+            <Button className="bg-violet-700" size="lg">
+              <Plus /> Novo Fornecedor
+            </Button>
           </div>
         </div>
       </main>
