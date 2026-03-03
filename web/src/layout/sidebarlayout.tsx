@@ -12,6 +12,7 @@ import {
   LogOut,
   PackageSearch,
   Settings,
+  Truck,
   UsersRound,
 } from 'lucide-react';
 
@@ -50,6 +51,16 @@ const SidebarLayout = () => {
             <FileText /> Notas Fiscais
           </Button>
         </SidebarGroup>
+
+        <SidebarGroup>
+          <Button
+            className="hover:bg-[#5B13EC10] hover:text-[#5B13EC] justify-start"
+            size="sm"
+          >
+            <Truck /> Fornecedores
+          </Button>
+        </SidebarGroup>
+
         <SidebarGroup>
           <Button
             className="hover:bg-[#5B13EC10] hover:text-[#5B13EC] justify-start"
