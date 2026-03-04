@@ -10,11 +10,10 @@ import { Button } from '@/components/ui/button';
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { Title, TitleDescription, TitleRoot } from '@/components/ui/title';
 import { SidebarLayout } from '@/layout/sidebarlayout';
-import { Bell, Pin, Plus, SearchIcon } from 'lucide-react';
+import { Bell, Mail, Phone, Pin, Plus, SearchIcon } from 'lucide-react';
 import {
   Table,
   TableBody,
-  TableCaption,
   TableCell,
   TableHead,
   TableHeader,
@@ -35,6 +34,15 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationPrevious,
+  PaginationLink,
+  PaginationEllipsis,
+  PaginationNext,
+} from '@/components/ui/pagination';
 
 const Supplier = () => {
   return (
@@ -157,8 +165,7 @@ const Supplier = () => {
 
         <div className="p-8">
           <Table>
-            <TableCaption>A list of your recent invoices.</TableCaption>
-            <TableHeader>
+            <TableHeader className="bg-[#18181B]">
               <TableRow>
                 <TableHead className="w-[100px]">
                   FORNECEDOR / RAZÃO SOCIAL
@@ -169,7 +176,7 @@ const Supplier = () => {
                 <TableHead className="text-right">STATUS</TableHead>
               </TableRow>
             </TableHeader>
-            <TableBody>
+            <TableBody className="bg-[#18181B]">
               <TableRow>
                 <TableCell className="font-medium">INV001</TableCell>
                 <TableCell>45.123.456/0001-89</TableCell>
@@ -177,8 +184,14 @@ const Supplier = () => {
                   São Paulo <br /> SP
                 </TableCell>
                 <TableCell>
-                  contato@techsolutions.com.br <br />
-                  Caralho
+                  <div className="flex gap-2">
+                    <Mail size="18" />
+                    contato@techsolutions.com.br
+                  </div>
+                  <div className="flex gap-2">
+                    <Phone size="18" />
+                    (14) 99100-0000
+                  </div>
                 </TableCell>
                 <TableCell className="text-right">Ativo</TableCell>
               </TableRow>
@@ -190,13 +203,122 @@ const Supplier = () => {
                   São Paulo <br /> SP
                 </TableCell>
                 <TableCell>
-                  contato@techsolutions.com.br <br />
-                  Caralho
+                  <div className="flex gap-2">
+                    <Mail size="18" />
+                    contato@techsolutions.com.br
+                  </div>
+                  <div className="flex gap-2">
+                    <Phone size="18" />
+                    (14) 99100-0000
+                  </div>
+                </TableCell>
+                <TableCell className="text-right">Ativo</TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell className="font-medium">INV001</TableCell>
+                <TableCell>45.123.456/0001-89</TableCell>
+                <TableCell>
+                  São Paulo <br /> SP
+                </TableCell>
+                <TableCell>
+                  <div className="flex gap-2">
+                    <Mail size="18" />
+                    contato@techsolutions.com.br
+                  </div>
+                  <div className="flex gap-2">
+                    <Phone size="18" />
+                    (14) 99100-0000
+                  </div>
+                </TableCell>
+                <TableCell className="text-right">Ativo</TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell className="font-medium">INV001</TableCell>
+                <TableCell>45.123.456/0001-89</TableCell>
+                <TableCell>
+                  São Paulo <br /> SP
+                </TableCell>
+                <TableCell>
+                  <div className="flex gap-2">
+                    <Mail size="18" />
+                    contato@techsolutions.com.br
+                  </div>
+                  <div className="flex gap-2">
+                    <Phone size="18" />
+                    (14) 99100-0000
+                  </div>
+                </TableCell>
+                <TableCell className="text-right">Ativo</TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell className="font-medium">INV001</TableCell>
+                <TableCell>45.123.456/0001-89</TableCell>
+                <TableCell>
+                  São Paulo <br /> SP
+                </TableCell>
+                <TableCell>
+                  <div className="flex gap-2">
+                    <Mail size="18" />
+                    contato@techsolutions.com.br
+                  </div>
+                  <div className="flex gap-2">
+                    <Phone size="18" />
+                    (14) 99100-0000
+                  </div>
+                </TableCell>
+                <TableCell className="text-right">Ativo</TableCell>
+              </TableRow>
+
+              <TableRow>
+                <TableCell className="font-medium">INV001</TableCell>
+                <TableCell>45.123.456/0001-89</TableCell>
+                <TableCell>
+                  São Paulo <br /> SP
+                </TableCell>
+                <TableCell>
+                  <div className="flex gap-2">
+                    <Mail size="18" />
+                    contato@techsolutions.com.br
+                  </div>
+                  <div className="flex gap-2">
+                    <Phone size="18" />
+                    (14) 99100-0000
+                  </div>
                 </TableCell>
                 <TableCell className="text-right">Ativo</TableCell>
               </TableRow>
             </TableBody>
           </Table>
+        </div>
+
+        <div>
+          <Pagination>
+            <PaginationContent>
+              <PaginationItem>
+                <PaginationPrevious href="#" />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#" isActive>
+                  1
+                </PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#">2</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationLink href="#">3</PaginationLink>
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationEllipsis />
+              </PaginationItem>
+              <PaginationItem>
+                <PaginationNext href="#" />
+              </PaginationItem>
+            </PaginationContent>
+          </Pagination>
         </div>
       </main>
     </SidebarProvider>
